@@ -75,12 +75,12 @@ namespace RustEditProCrack.Core
                 bool prefabResult = smartPrefabUnlocker.UnlockPrefabsSmartly();
                 
                 // STEP 3: Password Protection Removal
-                // Console.WriteLine("\n🔧 STEP 3: PASSWORD PROTECTION REMOVAL");
-                // var passwordRemover = new PasswordProtectionRemover(assembly);
-                // bool passwordResult = passwordRemover.RemovePasswordProtection();
+                Console.WriteLine("\n🔧 STEP 3: PASSWORD PROTECTION REMOVAL");
+                var passwordRemover = new PasswordProtectionRemover(assembly);
+                bool passwordResult = passwordRemover.RemovePasswordProtection();
                 
                 // Результат
-                if (proResult && prefabResult) //&& passwordResult)
+                if (proResult && prefabResult && passwordResult)
                 {
                     Console.WriteLine("\n🎉 ВСЕ ПАТЧИ ПРИМЕНЕНЫ УСПЕШНО!");
                     return true;
